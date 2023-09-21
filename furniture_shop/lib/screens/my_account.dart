@@ -59,7 +59,7 @@ class _MyAccountState extends State<MyAccount> {
                 hintText: 'male',
               ),
               SizeUtils.verticalSpacing(
-                  height: MediaQuery.of(context).size.height * .15),
+                  height: MediaQuery.of(context).size.height * .13),
               Button(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * .06,

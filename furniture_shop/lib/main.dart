@@ -4,12 +4,7 @@ import 'package:furniture_shop/cubit/cubit/bottom_item_cubit.dart';
 import 'package:furniture_shop/cubit/details_item_color/cubit/details_item_color_cubit.dart';
 import 'package:furniture_shop/cubit/payment/cubit/payment_cubit.dart';
 import 'package:furniture_shop/cubit/timer/cubit/timer_cubit.dart';
-import 'package:furniture_shop/screens/dashboard.dart';
-import 'package:furniture_shop/screens/demo.dart';
-import 'package:furniture_shop/screens/my_account.dart';
-import 'package:furniture_shop/screens/setting.dart';
 import 'package:furniture_shop/screens/splashscreen.dart';
-import 'package:furniture_shop/screens/support.dart';
 
 void main() {
   runApp(const MyApp());

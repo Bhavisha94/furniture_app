@@ -18,6 +18,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorUtils.white,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -72,6 +73,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 color: ColorUtils.yellow,
                 text: 'Signup',
                 fontSize: 14,
+                onCallBack: () => Navigator.pop(context),
               ),
             ],
           ),

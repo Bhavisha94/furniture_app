@@ -75,7 +75,7 @@ class _OnBordingState extends State<OnBording> {
                             curve: Curves.easeIn),
                       ))
                     : Padding(
-                        padding: const EdgeInsets.only(right: 15),
+                        padding: const EdgeInsets.only(right: 25),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -94,12 +94,10 @@ class _OnBordingState extends State<OnBording> {
                                 }
                               },
                               child: SizedBox(
-                                width: 23,
-                                height: 18,
-                                child: Center(
-                                  child: SvgPicture.asset(
-                                      'assets/images/arrow.svg'),
-                                ),
+                                width: 27,
+                                height: 22,
+                                child:
+                                    SvgPicture.asset('assets/images/arrow.svg'),
                               ),
                             )
                           ],

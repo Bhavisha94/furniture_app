@@ -248,7 +248,9 @@ class _YourCartState extends State<YourCart> {
                   height: MediaQuery.of(context).size.height * .06,
                   text: 'Pay Now'.toUpperCase(),
                   color: ColorUtils.yellow,
-                  fontSize: 12)
+                  fontSize: 12),
+              SizeUtils.verticalSpacing(
+                  height: MediaQuery.of(context).size.height * .02),
             ],
           ),
         ),

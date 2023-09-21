@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:furniture_shop/screens/cart.dart';
 import 'package:furniture_shop/screens/change_location.dart';
 import 'package:furniture_shop/screens/login.dart';
 import 'package:furniture_shop/screens/my_account.dart';
+import 'package:furniture_shop/screens/my_cart.dart';
 import 'package:furniture_shop/screens/setting.dart';
 import 'package:furniture_shop/screens/support.dart';
 import 'package:furniture_shop/utils/colors.dart';
@@ -29,10 +31,13 @@ class _DrawerMenuState extends State<DrawerMenu> {
           children: [
             SizeUtils.verticalSpacing(
                 height: MediaQuery.of(context).size.height * .015),
-            Icon(
-              Icons.close,
-              color: ColorUtils.shadeGray4,
-              size: 25,
+            InkWell(
+              onTap: () => Navigator.pop(context),
+              child: Icon(
+                Icons.close,
+                color: ColorUtils.shadeGray4,
+                size: 25,
+              ),
             ),
             SizeUtils.verticalSpacing(
                 height: MediaQuery.of(context).size.height * .025),
@@ -77,7 +82,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
               'payments',
               'payments',
               () => Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => const Card())),
+                  context, MaterialPageRoute(builder: (_) => const MyCart())),
             ),
             SizeUtils.verticalSpacing(
                 height: MediaQuery.of(context).size.height * .025),

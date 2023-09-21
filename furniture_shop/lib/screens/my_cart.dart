@@ -226,7 +226,9 @@ class _MyCartState extends State<MyCart> {
               fontSize: 12,
               onCallBack: () => Navigator.push(
                   context, MaterialPageRoute(builder: (_) => const YourCart())),
-            )
+            ),
+            SizeUtils.verticalSpacing(
+                height: MediaQuery.of(context).size.height * .02),
           ],
         )),
       ),

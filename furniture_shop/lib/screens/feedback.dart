@@ -32,59 +32,61 @@ class _FeedBackState extends State<FeedBack> {
         width: MediaQuery.of(context).size.width,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-          child: Column(
-            children: [
-              Image.asset(
-                'assets/images/sofa.png',
-                width: 324,
-                height: 360,
-                fit: BoxFit.fill,
-              ),
-              SizeUtils.verticalSpacing(
-                  height: MediaQuery.of(context).size.height * .015),
-              RatingBar.builder(
-                initialRating: 3,
-                minRating: 1,
-                direction: Axis.horizontal,
-                itemCount: 5,
-                itemPadding: const EdgeInsets.symmetric(horizontal: 5.0),
-                unratedColor: ColorUtils.white,
-                itemBuilder: (context, index) {
-                  return RateWidget(color: ColorUtils.yellow);
-                },
-                onRatingUpdate: (rating) {},
-              ),
-              SizeUtils.verticalSpacing(
-                  height: MediaQuery.of(context).size.height * .015),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * .8,
-                child: TextField(
-                  maxLines: 5,
-                  keyboardType: TextInputType.multiline,
-                  decoration: InputDecoration(
-                      // label: Text(
-                      //   'Comment',
-                      //   style: textStyle.copyWith(
-                      //       fontFamily: 'Montserrat', fontSize: 13),
-                      // ),
-                      hintText: 'Add your comment',
-                      hintStyle: textStyle.copyWith(
-                          fontFamily: 'Montserrat', fontSize: 13),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      )),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/images/sofa.png',
+                  width: 324,
+                  height: 360,
+                  fit: BoxFit.fill,
                 ),
-              ),
-              SizeUtils.verticalSpacing(
-                  height: MediaQuery.of(context).size.height * .055),
-              Button(
-                width: MediaQuery.of(context).size.width * .85,
-                height: MediaQuery.of(context).size.height * .06,
-                text: 'Submit'.toUpperCase(),
-                color: ColorUtils.yellow,
-                fontSize: 14,
-              ),
-            ],
+                SizeUtils.verticalSpacing(
+                    height: MediaQuery.of(context).size.height * .015),
+                RatingBar.builder(
+                  initialRating: 3,
+                  minRating: 1,
+                  direction: Axis.horizontal,
+                  itemCount: 5,
+                  itemPadding: const EdgeInsets.symmetric(horizontal: 5.0),
+                  unratedColor: ColorUtils.white,
+                  itemBuilder: (context, index) {
+                    return RateWidget(color: ColorUtils.yellow);
+                  },
+                  onRatingUpdate: (rating) {},
+                ),
+                SizeUtils.verticalSpacing(
+                    height: MediaQuery.of(context).size.height * .015),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * .8,
+                  child: TextField(
+                    maxLines: 5,
+                    keyboardType: TextInputType.multiline,
+                    decoration: InputDecoration(
+                        // label: Text(
+                        //   'Comment',
+                        //   style: textStyle.copyWith(
+                        //       fontFamily: 'Montserrat', fontSize: 13),
+                        // ),
+                        hintText: 'Add your comment',
+                        hintStyle: textStyle.copyWith(
+                            fontFamily: 'Montserrat', fontSize: 13),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        )),
+                  ),
+                ),
+                SizeUtils.verticalSpacing(
+                    height: MediaQuery.of(context).size.height * .055),
+                Button(
+                  width: MediaQuery.of(context).size.width * .85,
+                  height: MediaQuery.of(context).size.height * .06,
+                  text: 'Submit'.toUpperCase(),
+                  color: ColorUtils.yellow,
+                  fontSize: 14,
+                ),
+              ],
+            ),
           ),
         ),
       ),

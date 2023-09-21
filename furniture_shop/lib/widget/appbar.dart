@@ -9,13 +9,15 @@ class AppBarWidget {
       List<Widget>? action,
       required BuildContext context}) {
     return AppBar(
-      leading: InkWell(
-        onTap: () => Navigator.pop(context),
-        child: Padding(
-          padding: const EdgeInsets.only(left: 10),
-          child: SvgPicture.asset('assets/images/back.svg'),
-        ),
-      ),
+      leading: title != 'Profile'
+          ? InkWell(
+              onTap: () => Navigator.pop(context),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: SvgPicture.asset('assets/images/back.svg'),
+              ),
+            )
+          : const SizedBox(),
       leadingWidth: 30,
       backgroundColor: Colors.transparent,
       elevation: 0,

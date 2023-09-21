@@ -7,6 +7,7 @@ import 'package:furniture_shop/screens/cart.dart';
 import 'package:furniture_shop/screens/favorite.dart';
 import 'package:furniture_shop/screens/home.dart';
 import 'package:furniture_shop/screens/home2.dart';
+import 'package:furniture_shop/screens/my_account.dart';
 import 'package:furniture_shop/screens/profile.dart';
 import 'package:furniture_shop/utils/colors.dart';
 import 'package:furniture_shop/widget/bottom_item.dart';
@@ -20,7 +21,8 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   int index = 0;
-  List<Widget> list = const [Home2(), Cart(), Favorite(), Profile()];
+  //List<Widget> list = const [Home2(), Cart(), Favorite(), Profile()];
+  List<Widget> list = const [Home2(), Cart(), Cart(), Profile()];
 
   @override
   Widget build(BuildContext context) {
